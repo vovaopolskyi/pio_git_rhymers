@@ -10,8 +10,9 @@ venv/
 .DS_Store
 Thumbs.db
 
-
+target/
 *.log
+*.class
 
 
 .vscode/
