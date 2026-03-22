@@ -4,9 +4,13 @@ public class DefaultCountingOutRhymer {
 
     private static final int ERROR = -1;
     private static final int STACK_CAPACITY = 12;
-    private int[] NUMBERS = new int[STACK_CAPACITY];
+    private final int[] NUMBERS = new int[STACK_CAPACITY];
 
     public int total = ERROR;
+
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())
