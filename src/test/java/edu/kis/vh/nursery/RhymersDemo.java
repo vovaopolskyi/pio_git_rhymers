@@ -7,29 +7,9 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
-        final int START = 1;
-        final int END = 15;
-        DefaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
-                factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
-        
-        for (int i = START; i < END; i++)
-            for (int j = 0; j < 3; j++)
-                rhymers[j].countIn(i);
-        
-        java.util.Random rn = new java.util.Random();
-        for (int i = START; i < END; i++)
-            rhymers[3].countIn(rn.nextInt(20));
-        
-        for (int i = 0; i < rhymers.length; i++) {
-            while (!rhymers[i].isEmpty())
-                System.out.print(rhymers[i].countOut() + "  ");
-            System.out.println();
-        }
-        
-        System.out.println("total rejected is "
-                + ((HanoiRhymer) rhymers[3]).reportRejected());
-        
+        testRhymers(factory);  // <-- main tylko tworzy factory i deleguje
     }
+
     public static void testRhymers(Rhymersfactory factory) {
         final int START = 1;
         final int END = 15;
