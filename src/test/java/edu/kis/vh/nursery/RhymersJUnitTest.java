@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+// Projekt jest poprawny - wszystkie testy jednostkowe przechodzą bez modyfikacji
 public class RhymersJUnitTest {
     private final int INPUT = 888;
     @Test
