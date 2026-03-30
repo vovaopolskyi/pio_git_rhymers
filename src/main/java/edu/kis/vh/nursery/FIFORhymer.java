@@ -4,6 +4,8 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+
+    // TODO: needs refactoring - algorytm countOut() ma złożoność O(n^2)
     @Override
     public int countOut() {
         if (isEmpty())
